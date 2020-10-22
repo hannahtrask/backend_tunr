@@ -5,7 +5,7 @@ const mongoose = require("./db/connection");
 //cors
 const cors = require("cors");
 //we'll configure this file later
-const corsOptions = require("./configs/cors.js");
+//const corsOptions = require("./configs/cors.js");
 
 //Bringing in Express
 const express = require("express");
@@ -13,7 +13,7 @@ const app = express();
 
 //other imports
 const morgan = require("morgan");
-const songRouter = require("./controllers/song");
+//const songRouter = require("./controllers/song");
 
 /////
 //middleware
@@ -31,6 +31,8 @@ app.use(morgan("tiny")); //logging
 app.get("/", (req, res) => {
   res.json({ hello: "hello world" });
 });
+
+//app.use('/songs', songRouter);
 
 //listener
 app.listen(PORT, () => {
