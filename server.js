@@ -13,7 +13,7 @@ const app = express();
 
 //other imports
 const morgan = require("morgan");
-//const songRouter = require("./controllers/song");
+const songRouter = require("./controllers/song");
 
 /////
 //middleware
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
   res.json({ hello: "hello world" });
 });
 
-//app.use('/songs', songRouter);
+app.use('/songs', songRouter);
 
 //listener
 app.listen(PORT, () => {
