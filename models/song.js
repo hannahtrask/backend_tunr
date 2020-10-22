@@ -3,8 +3,8 @@ const { Schema, model } = require("mongoose")
 //song schema
 const songSchema = new Schema(
     {
-        title: String,
-        artist: String,
+        title: { type: String, required: true },
+        artist: { type: String, required: true },
         time: { type: String, required: true }
     }
 )
